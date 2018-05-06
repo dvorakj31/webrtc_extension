@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="/css/options.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/js/options.js"></script>
+    <script type="text/javascript" src="/js/global.js"></script>
+  </head>
+  <body style="width:400px; height:80px">
+    <label for="custom">Custom security (Websites on whitelist have default settings specified by browser or by other extensions, websites not on whitelist have WebRTC off)</label>
+    <input type="radio" id="custom" value="custom" name="option"><br>
+    <textarea name="custom" id="custom_field" cols="40" rows="10" placeholder="Websites whitelist e.g. www.example.com, example.com, ..."></textarea><br>
+    <label for="strong">Strong security (JavaScript is off and WebRTC is off)</label>
+    <input type="radio" id="strong" value="strong" name="option"><br>
+    <label for="medium">Medium security (JavaScript is on and WebRTC is off)</label>
+    <input type="radio" id="medium" value="medium" name="option"><br>
+    <label for="low">Low security (JavaScript is on and WebRTC is on)</label>
+    <input type="radio" id="low" value="low" name="option"><br><br>
+    <button type="button" id="save">Save and close</button>
+    <button type="button" id="close">Close without saving</button>
+  </body>
+</html>
