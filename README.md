@@ -1,4 +1,4 @@
-# webrtc_extension
+# WebRTC Leak Killer Extension
 WebRTC extension for Google Chrome / Chromium
 
 This extension prevents WebRTC IP leaks.
