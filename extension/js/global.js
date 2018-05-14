@@ -45,6 +45,8 @@ function parseProtocol(website)
 // check if URL is on whitelist
 function onWhitelist(url, whitelist)
 {
+    if (!whitelist || !url)
+        return false;
     let splitWl = whitelist.trim().split(',');
     let parsedUrl = parseHost(url);
     for (i = 0; i < splitWl.length; i++)

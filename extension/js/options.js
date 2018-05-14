@@ -28,7 +28,7 @@ function saveOptions()
 function loadOptions()
 {
     chrome.storage.local.get(['option', 'whitelist'], function(items) {
-        let opt = items.option ? items.option : 'low';
+        let opt = items.option ? items.option : 'custom';
         document.getElementById('custom_field').value = (items.whitelist ? items.whitelist : '');
         setOption(opt);
         showCustomConfig(opt === 'custom');

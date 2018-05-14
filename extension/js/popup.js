@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         chrome.storage.local.get(['option', 'whitelist'], function(items){
             // in each case have to be documents set because of JS asynchronous run
+            if (!items.option)
+                items.option = 'custom';
             switch(items.option)
             {
                 case 'custom':

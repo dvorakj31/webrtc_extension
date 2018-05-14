@@ -86,9 +86,9 @@ chrome.runtime.onInstalled.addListener(function() {
 // Callback function is triggered when browser starts navigating tab to some site.
 chrome.webNavigation.onBeforeNavigate.addListener(function(data) {
     chrome.storage.local.get(['option', 'whitelist'], function(items) {
-        if (!items.option || items.option !== 'custom')
+        if (items.option && items.option !== 'custom')
             return;
-        if (!onWhitelist(data.url, items.whitelist))
+        if (!items.option || !onWhitelist(data.url, items.whitelist))
             setWebRTC(true);
     });
 });
