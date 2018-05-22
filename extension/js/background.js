@@ -15,7 +15,6 @@ function setContextMenu()
 
     chrome.contextMenus.create(addToWhitelistMenuItem);
     chrome.contextMenus.create(deleteFromWhitelistMenuItem);
-    chrome.contextMenus.onClicked.addListener(contextMenuEvent);
 }
 
 // One event handler defined for both of context menu items, that choose which function is called
@@ -82,6 +81,8 @@ function removeFromWhitelist(data)
 chrome.runtime.onInstalled.addListener(function() {
     setContextMenu();
 });
+
+chrome.contextMenus.onClicked.addListener(contextMenuEvent);
 
 // Callback function is triggered when browser starts navigating tab to some site.
 chrome.webNavigation.onBeforeNavigate.addListener(function(data) {

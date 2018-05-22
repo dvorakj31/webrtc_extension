@@ -4,7 +4,7 @@
   "name": "WebRTC Leak Killer",
   "short_name": "Leak Killer",
   "description": "This extension prevents IP leakage via WebRTC",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minimum_chrome_version": "48",
 
   "icons": 
