@@ -76,7 +76,13 @@ function setPrivacy(opt)
             setWebRTC(true);
             return;
         }
-        // Custom level security has no defaualt settings - everything is solved on web page navigation event
+
+        // Custom level security has defaualt settings only for JavaScript - WebRTC is solved on web page navigation event
+        case 'custom':
+        {
+            setJavaScript(false);
+            return;
+        }
         default:
             return;
     }

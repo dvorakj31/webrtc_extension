@@ -89,7 +89,6 @@ chrome.webNavigation.onBeforeNavigate.addListener(function(data) {
     chrome.storage.local.get(['option', 'whitelist'], function(items) {
         if (items.option && items.option !== 'custom')
             return;
-        if (!items.option || !onWhitelist(data.url, items.whitelist))
-            setWebRTC(true);
+        setWebRTC(!onWhitelist(data.url, items.whitelist));
     });
 });
